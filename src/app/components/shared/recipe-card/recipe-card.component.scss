@@ -1,0 +1,27 @@
+@import "../../../styles/colori.scss";
+
+.container-cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+
+.card-image{
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.card-title{
+
+  font-weight: bold;
+  font-size: 16px;
+  color: $primaryColor-1;
+}
+
+.card-text{
+  text-align: justify;
+}

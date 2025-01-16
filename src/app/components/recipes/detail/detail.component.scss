@@ -1,0 +1,98 @@
+.detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+}
+
+.detail-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; // Allinea gli elementi per occupare l'intera larghezza
+  width: 100%; // La card occupa tutta la larghezza del contenitore
+height: 100%;
+}
+
+.card-image-detail {
+  position: relative;
+  top: -20px;
+  left: -1px;
+  margin-left: auto; // Spinge l'immagine verso destra
+  display: block; // Garantisce che il margine venga applicato correttamente
+  height: 380px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-body-detail {
+  padding: 10px;
+}
+
+.card-title-detail {
+  color: rgb(189, 61, 61);
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-description-detail {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #746a6a;
+  margin-bottom: 100px;
+}
+
+.card-info {
+  margin-bottom: 20px;
+
+  h5 {
+    margin-bottom: 10px;
+    // color: $primaryColor-2;
+  }
+
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #555;
+
+    li {
+      margin-bottom: 5px;
+    }
+  }
+}
+.date-published-detail{
+  position: absolute; // Posiziona il testo rispetto alla finestra (viewport)
+  bottom: 0; // Allinea al fondo della pagina
+  right: 0; // Allinea al lato destro della pagina
+  color: #746a6a;
+  margin-right: 10px;
+
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+ // background-color: $primaryColor-1;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+
+  &.btn-secondary {
+   // background-color: $secondaryColor-1;
+  }
+
+  &:hover {
+   //  background-color: darken($primaryColor-1, 10%);
+  }
+}
+
+.difficolta{
+  width: 130px;
+}

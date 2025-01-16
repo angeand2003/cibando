@@ -4,6 +4,7 @@
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
 @import"../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "./app/styles/colori.scss";
 body {
   margin: 0;
   padding: 0;
@@ -12,3 +13,32 @@ body {
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+
+
+.btn-primary{
+  background-color: $primaryColor-1;
+  border-color: $primaryColor-1;
+}
+
+.btn-primary:hover{
+  background-color: $primaryColor-1;
+  border-color: $primaryColor-1;
+}
+.is-danger{
+  color: red;
+  font-size: smaill;
+  position: relative;
+  top: -10px;
+}
+.ng-valid{
+  border: 2px solid green !important;
+}
+.p-inputtext {
+  border: none !important;
+  padding: 0!important;
+  margin: 0!important;
+}
+.p-password {
+  width: 100%;
+}

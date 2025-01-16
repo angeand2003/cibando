@@ -1,7 +1,48 @@
+<app-carousel></app-carousel>
+
 <div class="container-title">
   <h1 ng [ngClass]="evidenziato ? 'testoEvidenziato' : '' "  (click)="onEvidenzazione()" style="cursor: pointer;">Benvenuti  in Cibando</h1>
   <p [ngStyle]="{'background-color': evidenziato ? 'yellow' : 'white'}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, eos. Animi eveniet ipsa non ullam doloribus aperiam perspiciatis dolores fugit blanditiis hic. Assumenda, illo. Accusamus omnis laboriosam voluptatem ut similique!  </p>
 
   </div>
+  <h2>Ultime ricette</h2>
 
-  <app-recipes></app-recipes>
+  <app-recipe-card [recipes]="ricette"></app-recipe-card>
+<!-- <button (click)="openModal(modaleUno, '453', 'spaghetti')">ELIMINA PRODOTTO</button>
+<button (click)="openModal(modaleRegistrazione)">MODALE REGISTRAZIONE</button> -->
+
+
+  <!-- MODALE UNO -->
+  <ng-template #modaleUno let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Elimina prodotto</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+      <p>Sei sicuro di voler eliminare il prodotto num {{this.nomeModale}} <strong> {{this.nomeModale}}</strong>?</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="modal.dismiss()" NgbAutoFocus>ANNULLA</button>
+      <button type="button" class="btn btn-primary" (click)="modal.close('Close click')">CONFERMA</button>
+    </div>
+  </ng-template>
+
+
+  <!-- MODALE DUE -->
+  <ng-template #modaleRegistrazione let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Grazie per esserti registrato</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+      <h3>Ecco i tuoi dati:</h3>
+      <ul>
+        <li> Nome: {{this.datiRegistrzione ['nome']}}</li>
+        <li> Email: {{this.datiRegistrzione ['email']}}</li>
+      </ul>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="modal.dismiss()">CHIUDI</button>
+    </div>
+  </ng-template>
+
